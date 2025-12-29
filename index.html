@@ -14,6 +14,7 @@
                 <a href="#home">Home</a>
             </div>
             <div class="nav-links">
+                <a href="about.html">About</a>
                 <a href="#projects">Projects</a>
                 <a href="#contact">Contact</a>
             </div>
@@ -28,7 +29,11 @@
             </p>
         </div>
         <div class="image-container">
-            <img src="images/placeholder.png">
+            <img src="images/cavarretta_headshot.png" id="pfp">
+        </div>
+        <div class="other-print">
+            <a href="about.html" class="name-about"></a>
+            <a href="#projects" class="name-projects"></a>
         </div>
     </div>
     <!--projects-->
@@ -39,23 +44,23 @@
                 <div class="project-modal">
                     <p class="project-title">StormEye</p>
                     <img src="images/stormeye.png">
-                    <p class="project-desc">Responsive disaster response application that provides users with real-time weather conditions, evacuation routes, and shelter information.</p>
-                    <p class="languages">React, Bootstrap, Node, Express, MongoDB</p>
-                    <button class="learn-button">Learn More</button>
+                    <p class="project-desc">Disaster response application that provides users with real-time weather conditions, evacuation routes, and shelter information.</p>
+                    <p class="languages">React, Bootstrap, Node, Express, MongoDB, Agile</p>
+                    <button class="learn-button" data-project="stormeye">Learn More</button>
                 </div>
                 <div class="project-modal">
                     <p class="project-title">DS'aers Maze</p>
                     <img src="images/dsaersmaze.png">
                     <p class="project-desc">Maze generation game that displays BFS and DFS algorithms.</p>
                     <p class="languages">HTML, CSS, JavaScript</p>
-                    <button class="learn-button">Learn More</button>
+                    <button class="learn-button" data-project="maze">Learn More</button>
                 </div>
                 <div class="project-modal">
                     <p class="project-title">CrySense</p>
                     <img src="images/crysense.png">
                     <p class="project-desc">AI-enabled IoT device that classifies infant cries, alerting parents to specific needs.</p>
-                    <p class="languages">Arduino, C, Python, Tensorflow</p>
-                    <button class="learn-button">Learn More</button>
+                    <p class="languages">Arduino, C, Python, TensorFlow</p>
+                    <button class="learn-button" data-project="crysense">Learn More</button>
                 </div>
             </div>
             <div class="project-row">
@@ -64,8 +69,8 @@
                     <img src="images/magicwand.jpeg">
                     <p class="project-desc">Gesture-controlled, "Magic Wand", that wirelessly operates physical devices.
                     </p>
-                    <p class="languages">ESP32, C, Python</p>
-                    <button class="learn-button">Learn More</button>
+                    <p class="languages">ESP32, C, Python, Autodesk Fusion</p>
+                    <button class="learn-button" data-project="magicwand">Learn More</button>
                 </div>
                 <div class="project-modal">
                     <p class="project-title">Study Automator</p>
@@ -100,6 +105,121 @@
             </a>
         </div>
     </section>
+
+    <!--overlay (for project buttons)-->
+    <div class="overlay" id="overlay" onclick="closePopup()">
+        <div class="popup" onclick="event.stopPropagation()">
+            <div class="popup-content" id="stormeye">
+                <h1>StormEye</h1>
+                <h2>A real-time disaster response web app that helps users make safer decision during extreme weather events</h2>
+                <div class="horizontal-align">
+                    <p>
+                        <strong>Contributions:</strong> Frontend & Scrum Master<br><br>
+                        Built a responsive React UI for real-time disaster data and led Agile sprints to deliver features efficiently. 
+                    </p>
+                    <div class="popup-actions">
+                        <a class="btn" href="https://github.com/gracecavarretta/StormEye" target="_blank" rel="noopener">
+                            <img src="images/github.png">
+                            Github
+                        </a>
+                        <a class="btn btn-outline" href="https://youtube.com" target="_blank" rel="noopener">
+                            <img src="images/youtube.png">
+                            Demo
+                        </a>
+                    </div>
+                </div>
+                <div class="chips">
+                    <span class="chip">React</span>
+                    <span class="chip">Bootstrap</span>
+                    <span class="chip">Node</span>
+                    <span class="chip">Express</span>
+                    <span class="chip">MongoDB</span>
+                    <span class="chip">Agile</span>
+                </div>
+            </div>
+
+            <div class="popup-content" id="maze">
+                <h1>DS'aers Maze</h1>
+                <h2>A maze generation game that visualizes BFS and DFS pathfinding in real time</h2>
+                <div class="horizontal-align">
+                    <p>
+                        <strong>Contributions:</strong> Frontend <br><br>
+                        Built the interactive UI and algorithm visualizations, focusing on clear step-by-step playback and smooth user interaction. 
+                    </p>
+                    <div class="popup-actions">
+                        <a class="btn" href="https://github.com/gracecavarretta/mazegame" target="_blank" rel="noopener">
+                            <img src="images/github.png">
+                            Github
+                        </a>
+                        <a class="btn btn-outline" href="https://gracecavarretta.github.io/mazegame/" target="_blank" rel="noopener">
+                            <img src="images/dsaersmaze.png">
+                            Demo
+                            <span class="btn-subtext">Tip: Zoom out!</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="chips">
+                    <span class="chip">HTML</span>
+                    <span class="chip">CSS</span>
+                    <span class="chip">JavaScript</span>
+                </div>
+            </div>
+            
+            <div class="popup-content" id="crysense">
+                <h1>CrySense</h1>
+                <h2>An AI-enabled IoT system that classifies infant cries to help caregivers respond to specific needs</h2>
+                <div class="horizontal-align">
+                    <p>
+                        <strong>Contributions:</strong> Machine Learning<br><br>
+                        Developed an end-to-end system combining embedded hardware and machine learning, including data collection, model training, and real-time inference on an IoT device. 
+                    </p>
+                    <div class="popup-actions">
+                        <a class="btn" href="https://github.com/gracecavarretta/WiNGHacks" target="_blank" rel="noopener">
+                            <img src="images/github.png">
+                            Github
+                        </a>
+                        <a class="btn btn-outline" href="https://devpost.com/software/crysense" target="_blank" rel="noopener">
+                            <img src="images/devpost.png">
+                            Devpost (Demo)
+                        </a>
+                    </div>
+                </div>
+                <div class="chips">
+                    <span class="chip">Arduino</span>
+                    <span class="chip">C</span>
+                    <span class="chip">Python</span>
+                    <span class="chip">TensorFlow</span>
+                </div>
+            </div>
+
+            <div class="popup-content" id="magicwand">
+                <h1>Magic Wand</h1>
+                <h2>A gesture-controlled device that uses sensor data and machine learning to trigger wireless actions</h2>
+                <div class="horizontal-align">
+                    <p>
+                        <strong>Contributions:</strong> Machine Learning, Bluetooth Communication, & 3D Printing<br><br>
+                        Developed the gesture-recognition logic using sensor data, contributed to Bluetooth communication for transmitting commands, and designed and printed the physical enclosure using 3D printing. 
+                    </p>
+                    <div class="popup-actions">
+                        <a class="btn" href="https://github.com/frooia/Magic-Wand" target="_blank" rel="noopener">
+                            <img src="images/github.png">
+                            Github
+                        </a>
+                        <a class="btn btn-outline" href="https://youtube.com" target="_blank" rel="noopener">
+                            <img src="images/youtube.png">
+                            Demo
+                        </a>
+                    </div>
+                </div>
+                <div class="chips">
+                    <span class="chip">ESP32</span>
+                    <span class="chip">C</span>
+                    <span class="chip">Python</span>
+                    <span class="chip">AutoDesk Fusion</span>
+                </div>
+            </div>
+        </div>
+    </div>
     <script src="scripts/script.js"></script>
     <script src="scripts/name.js"></script>
   </body>

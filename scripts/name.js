@@ -1,26 +1,35 @@
-const textElement = document.querySelector(".name");
-const myName = " Grace Cavarretta ";
-let i = 0;
-let currSpan = null;
+function typeText(selector, text, speed = 70) {
+  const el = document.querySelector(selector);
+  let i = 0;
+  let currSpan = null;
 
-function typeName() {
-    if (i < myName.length) {
-        if (currSpan) currSpan.classList.remove("blink");
+  function type() {
+    if (i < text.length) {
+      if (currSpan) currSpan.classList.remove("blink");
 
-        //use span for blinker/cursor
-        const span = document.createElement("span");
-        span.textContent = myName[i];
-        span.classList.add("blink");
-        textElement.appendChild(span);
+      //for blinker/cursor
+      const span = document.createElement("span");
+      span.textContent = text[i];
+      span.classList.add("blink");
+      el.appendChild(span);
 
-        currSpan = span;
-        i++;
-        setTimeout(typeName, 70);
+      currSpan = span;
+      i++;
+      setTimeout(type, speed);
     } else {
-        setInterval(() => {
-            if (currSpan) currSpan.classList.toggle("blink");
-        }, 500);
+      setInterval(() => {
+        if (currSpan) currSpan.classList.toggle("blink");
+      }, 500);
     }
+  }
+
+  type();
 }
 
-typeName();
+typeText(".name", " Grace Cavarretta ");
+setTimeout(() => {
+  typeText(".name-about", "About");
+    setTimeout(() => {  
+        typeText(".name-projects", "Projects");
+    }, 500);
+}, 2000); 

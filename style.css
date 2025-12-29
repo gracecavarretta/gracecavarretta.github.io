@@ -3,8 +3,28 @@
   top: -90px;
 }
 
+a:visited, a:active {
+  text-decoration: none;
+  color: rgb(17, 14, 63);
+}
+
 html {
     scroll-behavior: smooth;
+}
+
+figcaption {
+  margin-top: 8px;
+  font-family: monospace;
+  font-size: 14px;
+  color: rgba(59,83,179,0.7);
+}
+
+.about {
+  max-width: 800px; 
+  margin: 0 auto; 
+  font-family: monospace; 
+  color: rgba(59,83,179,0.9); 
+  line-height: 1.6;
 }
 
 .navbar {
@@ -29,8 +49,17 @@ html {
   font-family: monospace;
   font-size: 18px;
   color: rgba(59, 83, 179, 0.9);
-  text-decoration: none;
 }
+
+.left-link a {
+  text-decoration: none;
+  color: rgba(59, 83, 179, 0.9);
+}
+
+.left-link a:hover {
+  text-decoration: underline;
+}
+
 
 .nav-links {
     margin-left: auto;
@@ -81,6 +110,17 @@ html {
   color: transparent;
 }
 
+.other-print {
+  color: rgba(59, 83, 179);
+  font-size: 18px;
+  font-family: monospace;
+  white-space: pre;
+  padding-left: 0px;
+  display: flex;
+  align-items: left;
+  gap: 10px;
+}
+
 .bio {
     margin-top: 0px;
     font-size: 18px;
@@ -93,6 +133,9 @@ html {
 .image-container img {
     width: 100%;
     height: auto;
+    border-radius: 16px;
+    transition: transform 0.1s linear;
+    transform-style: preserve-3d;
 }
 
 .section {
@@ -142,13 +185,81 @@ html {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
-.project-title {
+.popup-content h1 {
   font-family: monospace;
+  font-size: 26px;
+  color: rgba(59, 83, 179);
+  margin-bottom: 5px;
+}
+
+.popup-content h2 {
+  margin-top: 0px;
+  font-style: italic;
+  font-weight: 0px;
+}
+
+.popup-content p {
+  text-align: left;
+  text-wrap: wrap;
+  width: 400px;
+}
+
+.popup-actions {
+  margin-top: 16px;
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+.btn {
+  padding: 10px 14px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-family: monospace;
+  border: 1px solid rgba(59,83,179,0.35);
+}
+
+.btn:hover {
+  text-decoration: underline;
+}
+
+.btn-outline {
+  background: transparent;
+}
+
+.btn img {
+  width: 100px;
+  height: 100px;
+}
+
+.btn p {
+  font-family: monospace;
+  font-size: 18px;
+  color: rgba(59, 83, 179);
+  padding: 0 auto;
+}
+
+.btn-subtext {
+  display: block;
+  font-size: 11px;
+  margin-top: 2px;
+  opacity: 0.7;
+}
+
+.horizontal-align {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.project-title, .popup-content h2 {
+  font-family: monospace;
+  font-weight: bold;
   font-size: 18px;
   color: rgba(59, 83, 179);
 }
 
-.project-desc, .languages {
+.project-desc, .languages, .popup-content p {
   font-family: monospace;
   font-size: 14px;
   color: rgba(59, 83, 179, 0.9);
@@ -161,6 +272,7 @@ html {
 
 .languages {
   margin-top: 0px;
+  font-style: italic;
 }
 
 .learn-button {
@@ -191,6 +303,69 @@ html {
   height: 200px;
   object-fit: cover;
   border-radius: 4px;
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden;
+  z-index: 9999;
+}
+
+.overlay.open-popup {
+  visibility: visible
+}
+
+.popup {
+  width: 600px;
+  background: white;
+  border-radius: 12px;
+  padding: 30px;
+  text-align: center;
+  transition: translate(-50%,-50%) scale(0.1);
+  transform: transform 0.4s, top 0.4s;
+  /*
+  transform: scale(0.9);
+  transition: transform 0.3s ease;
+  */
+}
+
+.overlay.open-popup .popup {
+  transform: scale(1);
+}
+
+.popup-content {
+  display: none;
+}
+
+.popup-content.active {
+  display: block;
+}
+
+.chips {
+  margin-top: 25px;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.chip {
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(59,83,179,0.25);
+  font-family: monospace;
+  font-size: 12px;
+}
+
+.chip:hover {
+  cursor: pointer;
+  background: grey;
+  color: white;
 }
 
 .contact-info {
