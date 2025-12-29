@@ -1,8 +1,17 @@
+#home {
+  position: relative;
+  top: -90px;
+}
+
 html {
     scroll-behavior: smooth;
 }
 
 .navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: white;
     width: 100%;
     padding-top: 36px;
     padding-bottom: 10px;
@@ -14,6 +23,13 @@ html {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.left-link {
+  font-family: monospace;
+  font-size: 18px;
+  color: rgba(59, 83, 179, 0.9);
+  text-decoration: none;
 }
 
 .nav-links {
@@ -38,6 +54,7 @@ html {
     align-items: center;
     max-width: 1100px;
     margin: 100px auto;
+    margin-top: 200px;
     padding-bottom: 81px;
 }
 
@@ -85,7 +102,7 @@ html {
 }
 
 .sec-title {
-    padding-top: 40px;
+    padding-top: 80px;
     margin-bottom: 10px;
     font-family: monospace;
     font-size: 36px;
@@ -131,15 +148,47 @@ html {
   color: rgba(59, 83, 179);
 }
 
-.project-desc {
+.project-desc, .languages {
   font-family: monospace;
   font-size: 14px;
   color: rgba(59, 83, 179, 0.9);
 }
 
+.project-desc {
+  margin-bottom: 2px;
+  height: 52px;
+}
+
+.languages {
+  margin-top: 0px;
+}
+
+.learn-button {
+  margin-left: 112px;
+  cursor: pointer;
+  font-family: monospace;
+  color: rgba(59, 83, 179, 0.9);
+  padding: 12px 12px;
+  width: 140px;
+  border-radius: 10px;
+  border-style: none;
+}
+
+.learn-button:hover {
+  animation: pulse 0.3s ease-in-out;
+  background-color: rgba(59, 83, 179, 0.9);
+  color: white;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
 .project-modal img {
   width: 100%;
-  height: 160px;
+  height: 200px;
   object-fit: cover;
   border-radius: 4px;
 }

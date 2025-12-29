@@ -5,9 +5,14 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
+    <!--home redirect (top of page)-->
+    <div id="home"></div>
     <!--navbar-->
     <nav class="navbar">
         <div class="nav-inner">
+            <div class="left-link">
+                <a href="#home">Home</a>
+            </div>
             <div class="nav-links">
                 <a href="#projects">Projects</a>
                 <a href="#contact">Contact</a>
@@ -15,7 +20,7 @@
         </div>
     </nav>
     <!--main section-->
-    <div class="main">
+    <div id="home" class="main">
         <div class="vert-container">
             <p class="name">></p>
             <p class="bio">
@@ -32,38 +37,45 @@
         <div class="projects">
             <div class="project-row">
                 <div class="project-modal">
-                    <p class="project-title">Project 1 Title</p>
-                    <img src="images/6227297.jpg">
-                    <p class="project-desc">Placeholder Description</p>
+                    <p class="project-title">StormEye</p>
+                    <img src="images/stormeye.png">
+                    <p class="project-desc">Responsive disaster response application that provides users with real-time weather conditions, evacuation routes, and shelter information.</p>
+                    <p class="languages">React, Bootstrap, Node, Express, MongoDB</p>
+                    <button class="learn-button">Learn More</button>
                 </div>
                 <div class="project-modal">
-                    <p class="project-title">Project 2 Title</p>
-                    <img src="images/6227297.jpg">
-                    <p class="project-desc">Placeholder Description</p>
-                    <p class="project-desc">Languages</p>
-                    <button>Learn More</button>
+                    <p class="project-title">DS'aers Maze</p>
+                    <img src="images/dsaersmaze.png">
+                    <p class="project-desc">Maze generation game that displays BFS and DFS algorithms.</p>
+                    <p class="languages">HTML, CSS, JavaScript</p>
+                    <button class="learn-button">Learn More</button>
                 </div>
                 <div class="project-modal">
-                    <p class="project-title">Project 3 Title</p>
-                    <img src="images/6227297.jpg">
-                    <p class="project-desc">Placeholder Description</p>
+                    <p class="project-title">CrySense</p>
+                    <img src="images/crysense.png">
+                    <p class="project-desc">AI-enabled IoT device that classifies infant cries, alerting parents to specific needs.</p>
+                    <p class="languages">Arduino, C, Python, Tensorflow</p>
+                    <button class="learn-button">Learn More</button>
                 </div>
             </div>
             <div class="project-row">
                 <div class="project-modal">
-                    <p class="project-title">Project 1 Title</p>
-                    <img src="images/6227297.jpg">
-                    <p class="project-desc">Placeholder Description</p>
+                    <p class="project-title">Magic Wand</p>
+                    <img src="images/magicwand.jpeg">
+                    <p class="project-desc">Gesture-controlled, "Magic Wand", that wirelessly operates physical devices.
+                    </p>
+                    <p class="languages">ESP32, C, Python</p>
+                    <button class="learn-button">Learn More</button>
                 </div>
                 <div class="project-modal">
-                    <p class="project-title">Project 2 Title</p>
-                    <img src="images/6227297.jpg">
-                    <p class="project-desc">Placeholder Description</p>
+                    <p class="project-title">Study Automator</p>
+                    <img src="images/studyautomator.png">
+                    <p class="project-desc">Work in progress..</p>
+                    <p class="languages"></p>
                 </div>
                 <div class="project-modal">
-                    <p class="project-title">Project 3 Title</p>
-                    <img src="images/6227297.jpg">
-                    <p class="project-desc">Placeholder Description</p>
+                    <p class="project-title">More to come!</p>
+                    <img src="images/wip.jpg">
                 </div>
             </div>
         </div>
