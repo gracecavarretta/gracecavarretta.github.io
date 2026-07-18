@@ -252,6 +252,18 @@ figcaption {
   gap: 30px;
 }
 
+.image-wrapper {
+  flex-shrink: 0;
+  width: 300px;
+}
+
+.image-wrapper img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+
 .project-title, .popup-content h2 {
   font-family: monospace;
   font-weight: bold;
